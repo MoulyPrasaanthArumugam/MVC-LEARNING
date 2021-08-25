@@ -15,7 +15,7 @@ namespace MVC_LEARNING.Controllers
             Employee employee = new Employee()
             {
                 EmployeeId = 001,
-                Name = "MOULY PRASAANTH",
+                Name = "MOULY PRASAANTH ARUUGAM",
                 Gender = "MALE",
                 City = "ERODE"
             };
