@@ -10,7 +10,7 @@ namespace MVC_LEARNING.Controllers
     public class EmployeeController : Controller
     {
         // GET: Employee
-        public ActionResult Details()
+        public ActionResult Details(int Id)
         {
             Employee employee = new Employee()
             {
@@ -19,7 +19,9 @@ namespace MVC_LEARNING.Controllers
                 Gender = "MALE",
                 City = "ERODE"
             };
-            return View(employee);
+
+
+            return View();
             
         }
     }
