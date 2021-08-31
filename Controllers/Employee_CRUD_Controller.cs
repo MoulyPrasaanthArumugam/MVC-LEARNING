@@ -43,17 +43,23 @@ namespace MVC_LEARNING.Controllers
             try
             {
                 // TODO: Add insert logic here
-                using (EmpDBModels db = new EmpDBModels())
+                if (ModelState.IsValid)
                 {
-                    db.EMPLOYEE_DETAILS.Add(employee);
-                   
-                    db.SaveChanges();
+                    using (EmpDBModels db = new EmpDBModels())
+                    {
+                        db.EMPLOYEE_DETAILS.Add(employee);
+
+                        db.SaveChanges();
+                    }
+
                 }
+                
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
+                ViewBag.message = ex.Message;
                 return View();
             }
         }

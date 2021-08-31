@@ -4,9 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LEARNINGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LEARNING.dbo.EMPLOYEE_DETAILS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+    <Schema Namespace="LEARNINGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="EMPLOYEE_DETAILS">
           <Key>
             <PropertyRef Name="ID" />
@@ -17,17 +15,9 @@ warning 6002: The table/view 'LEARNING.dbo.EMPLOYEE_DETAILS' does not have a pri
           <Property Name="CITY" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="LEARNINGModelStoreContainer">
-          <EntitySet Name="EMPLOYEE_DETAILS" EntityType="Self.EMPLOYEE_DETAILS" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [EMPLOYEE_DETAILS].[ID] AS [ID], 
-    [EMPLOYEE_DETAILS].[NAME] AS [NAME], 
-    [EMPLOYEE_DETAILS].[GENDER] AS [GENDER], 
-    [EMPLOYEE_DETAILS].[CITY] AS [CITY]
-    FROM [dbo].[EMPLOYEE_DETAILS] AS [EMPLOYEE_DETAILS]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="EMPLOYEE_DETAILS" EntityType="Self.EMPLOYEE_DETAILS" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LEARNINGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
